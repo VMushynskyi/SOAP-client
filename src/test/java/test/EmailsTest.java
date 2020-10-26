@@ -23,7 +23,7 @@ public class EmailsTest {
     SOAPConnector client;
 
     @Test()
-    @Description("verify that all emails request")
+    @Description("verify get all emails request")
     public void test_1() {
         GetAllEmailRequest request = new GetAllEmailRequest();
         GetAllEmailResponse response = (GetAllEmailResponse) client.callWebService(request);
@@ -32,7 +32,7 @@ public class EmailsTest {
     }
 
     @Test
-    @Description("verify that email request by address")
+    @Description("verify email get request by address")
     public void test_2() {
         GetEmailByAddressRequest request = new GetEmailByAddressRequest();
         request.setAddress("email@gmail.com");
@@ -42,7 +42,7 @@ public class EmailsTest {
     }
 
     @Test
-    @Description("verify that email request by subject")
+    @Description("verify email get request by subject")
     public void test_3() {
         GetEmailBySubjectRequest request = new GetEmailBySubjectRequest();
         request.setSubject("Second subject");
@@ -52,7 +52,7 @@ public class EmailsTest {
     }
 
     @Test
-    @Description("verify that email delete request")
+    @Description("verify email delete request")
     public void test_4() {
         DeleteEmailRequest request = new DeleteEmailRequest();
         request.setId(0);
@@ -66,7 +66,7 @@ public class EmailsTest {
     }
 
     @Test
-    @Description("verify that email delete request")
+    @Description("verify email set request")
     public void test_5() {
         SetEmailRequest request = new SetEmailRequest();
         SetEmailResponse response = (SetEmailResponse) client.callWebService(request);
