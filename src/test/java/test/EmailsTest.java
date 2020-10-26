@@ -72,5 +72,6 @@ public class EmailsTest {
         SetEmailResponse response = (SetEmailResponse) client.callWebService(request);
         String codeResponse = response.getCode().getCodeStatus();
         assertEquals(codeResponse, "200");
+        System.out.println();
     }
 }
