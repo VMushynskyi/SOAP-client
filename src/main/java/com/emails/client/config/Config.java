@@ -17,7 +17,7 @@ public class Config {
     @Bean
     public SOAPConnector soapConnector(Jaxb2Marshaller marshaller) {
         SOAPConnector client = new SOAPConnector();
-        client.setDefaultUri("http://localhost:8081/ws/soap-emails");
+        client.setDefaultUri("http://localhost:8083/ws/soap-emails");
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);
         return client;
